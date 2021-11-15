@@ -16,9 +16,10 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (playerInRange) {
+        if (playerInRange)
+        {
 
-            Debug.Log(inkJSON.text);
+            DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
         }
         else
         {
