@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private static InputManager instance;
+    public static InputManager GetInstance()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return instance;
     }
 }
