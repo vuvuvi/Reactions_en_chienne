@@ -21,6 +21,7 @@ public class DialogueTrigger : MonoBehaviour
         {
 
             DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+            playerInRange = false;
             
         }
         else
