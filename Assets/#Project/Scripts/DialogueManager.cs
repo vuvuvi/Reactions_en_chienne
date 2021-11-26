@@ -50,15 +50,15 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (!dialogueIsPlaying)
-        {
-            return;
-        }
+        //if (!dialogueIsPlaying)
+        //{
+        //    return;
+        //}
 
-        else
-        {
-            ContinueStory();
-        }
+        //else
+        //{
+        //    ContinueStory();
+        //}
 
 
     }
@@ -73,8 +73,9 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    private void ExitDialogueMode()
+    public void ExitDialogueMode()
     {
+        print("test");
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";

@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class dialogueSystem : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    private static DialogueManager instance;
+    public static DialogueManager GetInstance()
     {
-        
+        return instance;
     }
-
     // Update is called once per frame
-    void Update()
+    private void OnMouseDown()
     {
-        
+        DialogueManager.GetInstance().ExitDialogueMode();
     }
 }
