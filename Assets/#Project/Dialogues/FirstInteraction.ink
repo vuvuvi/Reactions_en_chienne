@@ -1,8 +1,8 @@
 
 
-Hey ! 
+Hey, you ! 
 * [...]
-    Hey, miss ! 
+
 * [Look behind] 
-    Hey, miss !
+    
 * [What ?!] 
