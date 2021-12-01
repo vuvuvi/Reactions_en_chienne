@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-5830199244308317288
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 8f90e302c17c34a46badce2336e0649b
+  m_EffectName: Attenuation
+  m_MixLevel: 459d252824e1fc340a5c33855cf3c268
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &-2951262483739819696
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: d9c00636acf8fb44984b4bed702a66ac
+  m_EffectName: Lowpass Simple
+  m_MixLevel: 409eeb414e8b65d46b2d9fbcc59c1813
+  m_Parameters:
+  - m_ParameterName: Cutoff freq
+    m_GUID: d9c2a82c5cf2de1479a191121789c9c9
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -19,6 +49,7 @@ AudioMixerController:
   m_AudioMixerGroupViews:
   - guids:
     - e366e5c13ffc8ee49a08f0eb6e593154
+    - 016a2f0aca3ce2441874e332194e1f8a
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -31,7 +62,8 @@ AudioMixerGroupController:
   m_Name: Master
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: e366e5c13ffc8ee49a08f0eb6e593154
-  m_Children: []
+  m_Children:
+  - {fileID: 7135209071398318146}
   m_Volume: 86a3e6ac2739c2a469f909537ffba7e9
   m_Pitch: 02b79ae1a29a78948b9d9c137ea3d6d7
   m_Send: 00000000000000000000000000000000
@@ -64,5 +96,29 @@ AudioMixerSnapshotController:
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 6cdca0423c04df640b4f55715a144e88
-  m_FloatValues: {}
+  m_FloatValues:
+    83fb30487ef55a941a193ea496ae3ab5: 23
+    1b623d3a9e4d62e4c83d40593d007cf3: 78
+    86a3e6ac2739c2a469f909537ffba7e9: -12
+    e82cc4af821aafd429c2ad4bd4af39ee: 0.7
   m_TransitionOverrides: {}
+--- !u!243 &7135209071398318146
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Voices
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 016a2f0aca3ce2441874e332194e1f8a
+  m_Children: []
+  m_Volume: 301ab6414041b9c4b879d30164412bb4
+  m_Pitch: 8dd7ce5d482aaaa4f9d645a2e65abd3c
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -5830199244308317288}
+  - {fileID: -2951262483739819696}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
