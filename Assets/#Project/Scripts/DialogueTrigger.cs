@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class DialogueTrigger : MonoBehaviour
 {
 
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
     private bool playerInRange;
+    public AudioSource sound;
     
 
     private void Awake()
     {
+        
         playerInRange = false;
     }
 
@@ -19,8 +23,10 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
-
+            
             DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+
+            
             playerInRange = false;
             
         }
@@ -34,6 +40,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            sound.Play();
             playerInRange = true;
         }
     }
