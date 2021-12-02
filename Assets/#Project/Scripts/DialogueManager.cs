@@ -16,7 +16,9 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI[] choicesText;
 
     private Story currentStory;
+    private DialogueTrigger dialogueTrigger;
     public bool dialogueIsPlaying { get; set; }
+    //public Animation reactions;
 
     private static DialogueManager instance;
 
@@ -63,8 +65,9 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON)
+    public void EnterDialogueMode(TextAsset inkJSON, DialogueTrigger dialogue)
     {
+        dialogueTrigger = dialogue;
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
@@ -115,6 +118,8 @@ public class DialogueManager : MonoBehaviour
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
             index++;
+            
+            //reactions.Play();
 
         }
 
@@ -139,5 +144,6 @@ public class DialogueManager : MonoBehaviour
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
         dialogueIsPlaying = false;
+        dialogueTrigger.StartAnimation(choiceIndex);
     }
 }
