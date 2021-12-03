@@ -6,15 +6,17 @@ using UnityEngine.EventSystems;
 
 public class Choices : MonoBehaviour
 {
+
     [SerializeField] private Animator animator;
     // Start is called before the first frame update
 
+    public Transform cameraRotation;
     public void TurnPlayer()
     {
 
         animator.SetBool("PlayTurn", true);
     }
-   
+
 
     private void OnTriggerExit(Collider other)
     {
@@ -24,5 +26,10 @@ public class Choices : MonoBehaviour
             animator.SetBool("PlayTurn", false);
 
         }
+    }
+
+    private void RotationDown(Transform transform)
+    {
+        cameraRotation = transform;
     }
 }
