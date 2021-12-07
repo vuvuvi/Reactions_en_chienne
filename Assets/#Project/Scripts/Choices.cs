@@ -13,19 +13,23 @@ public class Choices : MonoBehaviour
     public Transform cameraRotation;
     public void TurnPlayer()
     {
+        //animator.SetBool("PlayTurn", true);
+        animator.SetTrigger("Play Turn Around");
+    }
 
-        animator.SetBool("PlayTurn", true);
+    public void MakePlayerLookDown(float angle) {
+        cameraRotation.Rotate(Vector3.right, angle);
     }
 
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
+        // if (other.CompareTag("Player"))
+        // {
 
-            animator.SetBool("PlayTurn", false);
+        //     animator.SetBool("PlayTurn", false);
 
-        }
+        // }
     }
 
     private void RotationDown(Transform transform)
