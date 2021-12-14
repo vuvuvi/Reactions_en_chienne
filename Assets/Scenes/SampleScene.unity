@@ -1176,6 +1176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turningPlayer: {fileID: 0}
+  turningAgain: {fileID: 0}
 --- !u!4 &112753579
 Transform:
   m_ObjectHideFlags: 0
@@ -6555,7 +6556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0656a7e5759ccaf40a463b72bbf3a345, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0005
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0656a7e5759ccaf40a463b72bbf3a345, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25331,6 +25332,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1582112369, guid: 3e7fe2c969f7a8741b99182238279d76, type: 3}
+      propertyPath: turningAgain
+      value: 
+      objectReference: {fileID: 566215673}
+    - target: {fileID: 1582112369, guid: 3e7fe2c969f7a8741b99182238279d76, type: 3}
+      propertyPath: turningPlayer
+      value: 
+      objectReference: {fileID: 566215673}
     - target: {fileID: 3750891881573469872, guid: 3e7fe2c969f7a8741b99182238279d76, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.04
@@ -25383,27 +25392,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1582112369, guid: 3e7fe2c969f7a8741b99182238279d76, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e7fe2c969f7a8741b99182238279d76, type: 3}
---- !u!1 &1878956307 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3750891881573470543, guid: 3e7fe2c969f7a8741b99182238279d76, type: 3}
-  m_PrefabInstance: {fileID: 1878956306}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1878956308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878956307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8212ac6b0b60b694f8be5f49c318c405, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turningPlayer: {fileID: 566215673}
 --- !u!1001 &1878984062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28568,6 +28558,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1582112369, guid: 3e7fe2c969f7a8741b99182238279d76, type: 3}
+      propertyPath: turningAgain
+      value: 
+      objectReference: {fileID: 566215673}
     - target: {fileID: 1582112369, guid: 3e7fe2c969f7a8741b99182238279d76, type: 3}
       propertyPath: turningPlayer
       value: 
