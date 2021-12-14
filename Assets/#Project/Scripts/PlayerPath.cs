@@ -18,22 +18,33 @@ public class PlayerPath : MonoBehaviour
             //turningPlayer.GetBool("isTurned");
             if (turningPlayer.GetBool("isTurned") == false)
             {
-               
-                turningPlayer.SetBool("isTurned", true);
-                turningAgain.SetBool("Again", false);
+                TurnLeft();
 
             }
 
             else
             {
-                turningAgain.SetBool("Again", true);
-                turningPlayer.SetBool("isTurned", false);
+                TurnRight();
             }
-            
+
 
 
 
         }
+    }
+
+    public void TurnLeft()
+    {
+
+        turningPlayer.SetBool("isTurned", true);
+        turningAgain.SetBool("Again", false);
+    }
+
+    public void TurnRight()
+    {
+        turningAgain.SetBool("Again", true);
+        turningPlayer.SetBool("isTurned", false);
+
     }
 
 }
